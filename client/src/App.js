@@ -21,6 +21,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/auth" element={<HomePage />} />
+          <Route path="/auth/login" element={<HomePage />} />
+          <Route path="/auth/register" element={<HomePage />} />
           <Route path="/final-cv" element={<FinalCV />} />
           <Route path="/add-sections" element={<NewSectionsPage />} />
           <Route

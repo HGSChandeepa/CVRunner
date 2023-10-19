@@ -26,13 +26,15 @@ function NewSectionsPage() {
         </section>
         <section className=" mt-5 flex flex-col gap-4">
           {/* add a personal details single sectiom */}
-
-          <SingleSection
-            sectionName={"Final CV"}
-            onClickMethode={() => {
-              navigate("/final-cv");
-            }}
-          />
+          <div className=" bg-gradient-to-r from-yellow-400 to-purple-500 p-2 rounded-lg">
+            {" "}
+            <SingleSection
+              sectionName={"Final CV"}
+              onClickMethode={() => {
+                navigate("/final-cv");
+              }}
+            />
+          </div>
 
           <SingleSection
             sectionName={"PERSONAL DETAILS"}

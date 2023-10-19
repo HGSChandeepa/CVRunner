@@ -84,12 +84,12 @@ export default function FinalCV() {
   return (
     <div className="flex">
       <div
-        className="px-8 py-4 bg-white h-[1123px] w-[794px] mx-20 my-8 text-black text-left "
+        className="px-8 py-4 bg-white  w-[794px] mx-20 my-8 text-black text-left "
         ref={cvContainer}
         id="cv-container"
       >
         <div className="mb-8 ">
-          <h2 className="text-2xl font-bold mb-4  border-b-4 ">
+          <h2 className="text-xl font-bold mb-4  border-b-4 ">
             Personal Data
           </h2>
           <p className="mb-2">
@@ -141,7 +141,7 @@ export default function FinalCV() {
         </div>
 
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4  border-b-4">
+          <h2 className="text-xl font-bold mb-4  border-b-4">
             Education Data
           </h2>
           {allEducationData.map((education, index) => (
@@ -152,18 +152,84 @@ export default function FinalCV() {
               </p>
               <p>
                 <span className="font-semibold">Started Year:</span>{" "}
-                {education.startedYear.$numberInt}
+                {education.startedYear}
               </p>
               <p>
                 <span className="font-semibold">Ending Year:</span>{" "}
-                {education.endingYear.$numberInt}
+                {education.endingYear}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="mb-8">
+          <h2 className="text-xl font-bold mb-4  border-b-4">
+            Experience Data
+          </h2>
+          {allExperienceData.map((ex, index) => (
+            <div key={index} className="mb-2">
+              <p>
+                <span className="font-semibold">company Name:</span>{" "}
+                {ex.companyName}
+              </p>
+              <p>
+                <span className="font-semibold">Job Title:</span>{" "}
+                {ex.jobTitle}
+              </p>
+              <p>
+                <span className="font-semibold">Job Description:</span>{" "}
+                {ex.jobDescription}
+              </p>
+
+              <p>
+                <span className="font-semibold">Started Year:</span>{" "}
+                {ex.startedYear}
+              </p>
+              <p>
+                <span className="font-semibold">Ending Year:</span>{" "}
+                {ex.endingYear}
               </p>
             </div>
           ))}
         </div>
 
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4  border-b-4">
+          <h2 className="text-xl font-bold mb-4  border-b-4">
+            Personal Projects Data
+          </h2>
+          {allProjectsData.map((pp, index) => (
+            <div key={index} className="mb-2">
+              <p>
+                <span className="font-semibold">project Name:</span>{" "}
+                {pp.projectName}
+              </p>
+              <p>
+                <span className="font-semibold">teckstack:</span>{" "}
+                {pp.teckstack}
+              </p>
+              <p>
+                <span className="font-semibold">Project Description:</span>{" "}
+                {pp.projectDescription}
+              </p>
+
+              <p>
+                <span className="font-semibold">Started Year:</span>{" "}
+                {pp.startedYear}
+              </p>
+              <p>
+                <span className="font-semibold">Ending Year:</span>{" "}
+                {pp.endingYear}
+              </p>
+
+              <p>
+                <span className="font-semibold"></span>{" "}
+               <a className="font-semibold text-blue-600 underline"  href= {pp.projectLink}>Link</a>
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-xl font-bold mb-4  border-b-4">
             Languages Data
           </h2>
           {allLanguagesData.map((language, index) => (
@@ -175,7 +241,7 @@ export default function FinalCV() {
         </div>
 
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4  border-b-4">
+          <h2 className="text-xl font-bold mb-4  border-b-4">
             Technologies Data
           </h2>
           {allTechnologiesData.map((technology, index) => (
@@ -187,7 +253,7 @@ export default function FinalCV() {
         </div>
 
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4  border-b-4">
+          <h2 className="text-xl font-bold mb-4  border-b-4">
             Achievements Data
           </h2>
           {allAchivementsData.map((achievement, index) => (
@@ -202,7 +268,7 @@ export default function FinalCV() {
               </p>
               <p>
                 <span className="font-semibold">Achievement Year:</span>{" "}
-                {achievement.achievementYear.$numberInt}
+                {achievement.achievementYear}
               </p>
             </div>
           ))}
@@ -223,7 +289,7 @@ export default function FinalCV() {
               className="bg-gray-600 text-white py-2 px-4 rounded mt-4 hover:bg-yellow-600 ease-in-out"
               // onClick={handleDownloadPDF}
             >
-              Keep Editiong
+              Keep Editing
             </button>
           </a>
           <hr className=" mt-10" />
@@ -233,7 +299,7 @@ export default function FinalCV() {
             sequi itaque eaque, debitis sint nostrum
           </p>
           <button
-            className="bg-yellow-500 text-white py-2 px-4 rounded mt-4 hover:bg-yellow-600 ease-in-out"
+            className="bg-gradient-to-r from-yellow-400 to-purple-500 hover:from-yellow-600 hover:to-purple-600 ease-in-out text-white py-2 px-4 rounded mt-4 hover:bg-yellow-600 ease-in-out"
             // onClick={handleDownloadPDF}
           >
             Download PDF

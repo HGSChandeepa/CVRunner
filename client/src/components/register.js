@@ -37,8 +37,10 @@ function Register(props) {
         autoClose: 3000,
       });
 
-      //navigate to the Newsections page
-      navigate("/add-sections");
+      //redirect to the login page
+      navigate("/auth/login");
+      //reload the page
+      window.location.reload();
     } catch (err) {
       console.error(err);
       // Show an error toast
@@ -56,7 +58,7 @@ function Register(props) {
   const linkedinLogin = () => {};
 
   return (
-    <div className=" mt-5 flex flex-col items-center justify-center gap-10 border-2 border-yellow-600 p-10 rounded-2xl  ">
+    <div className=" mt-5 flex flex-col items-center justify-center gap-10 border-2 border-yellow-600 p-10 rounded-2xl mb-10 ">
       <h1 className=" text-xl">Create a free account and launch your career</h1>
       {/* socials */}
       <div className=" flex flow-row gap-10">

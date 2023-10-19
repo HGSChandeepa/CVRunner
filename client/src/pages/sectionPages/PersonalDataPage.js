@@ -46,7 +46,7 @@ export default function PersonalDataPage() {
         autoClose: 3000,
       });
       // Navigate to the sections page
-      navigate("auth/add-sections");
+      navigate("/add-sections");
     } catch (err) {
       // Show an error toast
       toast.error("Personal data failed to save. Please try again.", {
